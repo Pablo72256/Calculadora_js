@@ -1,113 +1,85 @@
-//Declaracion de variables
-let acumulador = 0
-let flag = true
+
+//Mostar, variable que muestra los numeros pulsados y los resultados
 let mostrar = ""
+//Flag, variable para saber si se debe limpiar mostrar, para añadir a mostrar un numero nuevo
+let flag = true
+//Acumulador, variable auxiliar para guardarnos una copia de la variable mostar y operar con ambas
+let acumulador = 0
+//Operacion, variable que almacena la ultima operacion seleccionada
 let operacion = "igual"
 
 //Funciones para añadir numeros del 0 al 9
 function añadirUno(){
-  if (flag==false){
-    mostrar = ""
-    flag = true
-  }
+  comprobarFlag()
   mostrar = mostrar + 1
   mostrarPantalla()
 }
 
 function añadirDos(){
-  if (flag==false){
-    mostrar = ""
-    flag = true
-  }
+  comprobarFlag()
   mostrar = mostrar  + 2
   mostrarPantalla()
 }
 
 function añadirTres(){
-  if (flag==false){
-    mostrar = ""
-    flag = true
-  }
+  comprobarFlag()
   mostrar = mostrar  + 3
-
   mostrarPantalla()
-
 }
 
 function añadirCuatro(){
-  if (flag==false){
-    mostrar = ""
-    flag = true
-  }
+  comprobarFlag()
   mostrar = mostrar  + 4
   mostrarPantalla()
-
 }
 
 function añadirCinco(){
-  if (flag==false){
-    mostrar = ""
-    flag = true
-  }
+  comprobarFlag()
   mostrar = mostrar  + 5
   mostrarPantalla()
-
 }
 
 function añadirSeis(){
-  if (flag==false){
-    mostrar = ""
-    flag = true
-  }
+  comprobarFlag()
   mostrar = mostrar  + 6
   mostrarPantalla()
-
 }
 
 function añadirSiete(){
-  if (flag==false){
-    mostrar = ""
-    flag = true
-  }
+  comprobarFlag()
   mostrar = mostrar  + 7
   mostrarPantalla()
-
 }
 
 function añadirOcho(){
-  if (flag==false){
-    mostrar = ""
-    flag = true
-  }
+  comprobarFlag()
   mostrar = mostrar  + 8
   mostrarPantalla()
 }
 
 function añadirNueve(){
-  if (flag==false){
-    mostrar = ""
-    flag = true
-  }
+  comprobarFlag()
   mostrar = mostrar  + 9
   mostrarPantalla()
 }
 
 function añadirCero(){
-  if (flag==false){
-    mostrar = ""
-    flag = true
-  }
+  comprobarFlag()
   mostrar = mostrar  + 0
   mostrarPantalla()
 }
 
 function añadirDecimales(){
+  comprobarFlag()
+  mostrar = mostrar  + "."
+  mostrarPantalla()
+}
+
+function comprobarFlag(){
   if (flag==false){
     mostrar = ""
     flag = true
   }
-  mostrar = mostrar  + "."
-  mostrarPantalla()
 }
 
 function mostrarPantalla(){
@@ -176,7 +148,6 @@ function limpiar(){
   mostrar = "0"
   mostrarPantalla()
 }
-
 
 document.getElementById("uno").addEventListener("click", añadirUno)
 document.getElementById("dos").addEventListener("click", añadirDos)
